@@ -9,7 +9,7 @@ public class CubeHolderController : MonoBehaviour
     
     [HideInInspector]
     public List<GameObject>                                 cubesList;
-    private const float                                     LERP_TIME = 0.5f;
+    private const float                                     LERP_TIME = 0.25f;
     [SerializeField]private PickUpCubeFloatingText          pickUpFloatingTextScript;
     #endregion
 
@@ -62,7 +62,10 @@ public class CubeHolderController : MonoBehaviour
 
     private void CubeAdd(GameObject cube)
     {
+        // floating text
         pickUpFloatingTextScript.ShowFloatingText();
+        // jump animation
+        // StickmanAnimatorScript.s_StickmanAnimatorScript.AnimatorTriggerJump();
 
         cubesList.Add(cube);
         cube.transform.SetParent(transform, true);
