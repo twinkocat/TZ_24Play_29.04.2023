@@ -19,6 +19,7 @@ public class Main : MonoBehaviour
     #region Initialization
     private void Awake()
     {
+        print("WARNING: Gravity scale modify by 3!");
         if (S_Main != null)
         { 
             print("Main: Instance already set. It should be Singleton"); 
